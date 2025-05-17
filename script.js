@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
          const model = productEl.getAttribute("data-model");
          const price = productEl.querySelector(".product-price").textContent;
          const message = `Olá, gostaria de comprar o modelo ${model}, ${price}. Poderia me dar mais informações?`;
-         const phoneNumber = "5541997755600"; // Replace with your actual number
+         const phoneNumber = "5541998810876";
          const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
             message
          )}`;
@@ -48,9 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
    // Add smooth scrolling to all anchor links
    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
-         if (this.getAttribute("href") !== "#") {
+         // Only apply smooth scrolling for links to sections on the current page
+         const targetId = this.getAttribute("href");
+         if (targetId !== "#" && targetId.startsWith("#")) {
             e.preventDefault();
-            const targetId = this.getAttribute("href");
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
@@ -62,5 +63,3 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    });
 });
-
-// Só um novo comentário

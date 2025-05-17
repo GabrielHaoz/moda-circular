@@ -146,6 +146,68 @@ a {
 .banner p {
    color: #b0b0b0;
 }
+/* Animated Text */
+.animated-text {
+   font-size: 1.3rem;
+   font-weight: 600;
+   color: #ffffff;
+   text-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+   animation: pulse 2s infinite;
+}
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.05);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+/* Circular Fashion Banner */
+.circular-fashion-banner {
+   background-color: #2a2a2a;
+   padding: 16px 24px;
+   border-radius: 8px;
+   margin-bottom: 24px;
+   text-align: center;
+   border-left: 4px solid #1db954;
+   animation: gentle-fade 4s infinite alternate;
+}
+
+.circular-fashion-banner p {
+   font-size: 1.1rem;
+   font-style: italic;
+   color: #e0e0e0;
+   line-height: 1.5;
+}
+
+.circular-fashion-banner i {
+   color: #1db954;
+   margin: 0 8px;
+   animation: spin-slow 8s infinite linear;
+}
+
+@keyframes gentle-fade {
+   0% {
+      opacity: 0.9;
+      transform: translateY(0);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(-2px);
+   }
+}
+
+@keyframes spin-slow {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
 /* Top Menu */
 .top-menu {
    background-color: #1f1f1f;
@@ -198,20 +260,25 @@ a {
 }
 .product-image {
    position: relative;
+   height: 200px; /* Fixed height for all product images */
+   overflow: hidden;
 }
 .product-image img {
    width: 100%;
+   height: 100%;
+   object-fit: cover; /* Ensure all images maintain aspect ratio and cover the container */
    display: block;
 }
 .product-badge {
    position: absolute;
    top: 8px;
-   left: 8px;
-   background-color: #eb0a0a;
+   right: 8px; /* Changed from left to right */
+   background-color: #e74c3c; /* Changed to red color */
    color: #ffffff;
    padding: 4px 8px;
    font-size: 0.75rem;
    border-radius: 4px;
+   font-weight: bold;
 }
 .product-details {
    padding: 16px;
