@@ -436,7 +436,7 @@ a {
    background-color: #1db954;
    color: #ffffff;
    padding: 12px;
-   border-radius: 50%;
+   border-radius: 10%;
    display: none;
    align-items: center;
    justify-content: center;
