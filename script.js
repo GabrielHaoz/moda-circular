@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
          const productEl = event.target.closest(".product");
          const model = productEl.getAttribute("data-model");
          const price = productEl.querySelector(".product-price").textContent;
-         const message = `Olá, gostaria de comprar o modelo ${model}, ${price}. Poderia me dar mais informações?`;
+         const message = `Olá, gostaria de comprar o ${model}, ${price}. Poderia me dar mais informações?`;
          const phoneNumber = "5541998810876";
          const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
             message
